@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retardio Maker</title>
+    <link rel="stylesheet" href="https://unpkg.com/98.css">
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">Retardio Maker</div>
+        </div>
+        <div class="window-body">
+            <div class="logo">
+                <div>
+                    <span style="color: skyblue;">R</span>
+                    <span style="color: green;">E</span>
+                    <span style="color: yellow;">T</span>
+                    <span style="color: red;">A</span>
+                    <span style="color: skyblue;">R</span>
+                    <span style="color: green;">D</span>
+                    <span style="color: yellow;">I</span>
+                    <span style="color: red;">O</span>
+                </div>
+                <div class="maker-text">MAKER</div>
+            </div>
+
+            <div class="status-bar">
+                <p class="status-bar-field">Drop image or click Upload</p>
+            </div>
+
+            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+            <button id="uploadBtn">Upload Image</button>
+
+            <div id="workspace" style="display: none;">
+                <div class="canvas-container">
+                    <div id="editor">
+                        <canvas id="mainCanvas"></canvas>
+                        <img id="maskOverlay" src="retardio-mask.png" alt="Mask" draggable="false">
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <div class="field-row">
+                        <label for="sizeSlider">Mask Size:</label>
+                        <input type="range" id="sizeSlider" min="50" max="400" value="200">
+                        <span id="sizeValue">200px</span>
+                    </div>
+                    <div class="field-row">
+                        <label for="opacitySlider">Opacity:</label>
+                        <input type="range" id="opacitySlider" min="1" max="100" value="100">
+                        <span id="opacityValue">100%</span>
+                    </div>
+                    <div class="buttons">
+                        <button id="resetBtn">Reset Position</button>
+                        <button id="downloadBtn">Download</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                This is not affiliated with the official retardio NFT project
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
